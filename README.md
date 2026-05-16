@@ -133,7 +133,7 @@ part{번호}/{이름}
 | ------ | --------------------------- |
 | 김민주 | https://github.com/chuuminggg |
 | 김유정 | https://github.com/uj-kim |
-| 조성윤 |  https://github.com/HighRol1er |
+| _|  https://github.com/HighRol1er |
 
 
 ---
