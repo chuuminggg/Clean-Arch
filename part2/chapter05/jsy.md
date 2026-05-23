@@ -11,6 +11,38 @@
 - 데이터와 함수가 응집력 있게 구성된 집단을 서로 구분 짓는 선을 그을 수 있다(데이터는 은닉, 일부 함수 외부 노출)
 - OO 프로그래밍은 프로그래머가 충분히 올바르게 행동함으로써 캡슐화된 데이터를 우회해서 사용하지 않을 거라는 믿음을 기반으로 한다.
 
+### 코드 예시
+
+```c
+// point.h
+struct Point;
+struct Point* makePoint(double x, double y);
+double distance (struct *p1, struct Point *p2);
+```
+
+```c
+// point.c
+#include "point.h"
+#include <stdlib.h>
+#include <math.h>
+
+struct Point {
+  double x,y;
+};
+
+struct Point* makepoint(double x, double y ) {
+  struct Point* p = malloc(sizeof(struct Point));
+  p->x = x;
+  p->y = y;
+  return p;
+}
+
+double distance(struct Point* p1, struct Point* p2) {
+  double dx = p1->x - p2->x;
+  double dy = p1->y - p2->y;
+  return sqrt(dx*dx + dy*dy);
+}
+
 ## 상속
 
 - 상속이란 어떤 변수와 함수를 하나의 유효 범위로 묶어서 재정의 하는 일.
@@ -30,3 +62,4 @@
 ## 결론
 
 OO란 다형성을 이용하여 전체 시스템의 모든 소스 코드 의존성에 대한 절대적인 제어 권한을 획득할 수 있는 능력 (아키텍트 관점)
+```
