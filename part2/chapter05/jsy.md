@@ -42,6 +42,7 @@ double distance(struct Point* p1, struct Point* p2) {
   double dy = p1->y - p2->y;
   return sqrt(dx*dx + dy*dy);
 }
+```
 
 ## 상속
 
@@ -62,4 +63,7 @@ double distance(struct Point* p1, struct Point* p2) {
 ## 결론
 
 OO란 다형성을 이용하여 전체 시스템의 모든 소스 코드 의존성에 대한 절대적인 제어 권한을 획득할 수 있는 능력 (아키텍트 관점)
+
+```
+
 ```
